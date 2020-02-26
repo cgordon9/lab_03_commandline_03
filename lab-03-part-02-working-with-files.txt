@@ -25,10 +25,14 @@ Follow the instructions line-by-line.
 4. Create a directory called my_files
 [NO OUTPUT]
 ----------
+v314-ent-004:mtec1003-lab-03 student$ mkdir my_files
+v314-ent-004:mtec1003-lab-03 student$ ls
+books		logs		logs.tar.gz	my_files	web
 ==========
 5. Change the directory to my_files
 [NO OUTPUT]
 ----------
+v314-ent-004:mtec1003-lab-03 student$ cd my_files
 ==========
 6. Create a new file using touch.
 
@@ -38,12 +42,19 @@ Copy and paste the output below.
 ----------
 
 
+v314-ent-004:my_files student$ touch foo.txt
+v314-ent-004:my_files student$ ls
+foo.txt
 
 ==========
 7. Create another new file using touch.
 
 $ touch bar.txt
 ----------
+
+v314-ent-004:my_files student$ touch bar.txt
+v314-ent-004:my_files student$ ls
+bar.txt	foo.txt
 
 
 
@@ -52,8 +63,12 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
-
-
+v314-ent-004:my_files student$ ls -al
+total 0
+drwxr-xr-x  4 student  staff  136 Feb 25 19:24 .
+drwxr-xr-x@ 8 student  staff  272 Feb 25 19:22 ..
+-rw-r--r--  1 student  staff    0 Feb 25 19:24 bar.txt
+-rw-r--r--  1 student  staff    0 Feb 25 19:24 foo.txt
 
 ==========
 9. Create a copy of bar.txt called baz.txt and then list the files again.
@@ -61,6 +76,9 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
+v314-ent-004:my_files student$ cp bar.txt baz.txt
+v314-ent-004:my_files student$ ls
+bar.txt	baz.txt	foo.txt
 
 
 
@@ -69,12 +87,21 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+v314-ent-004:my_files student$ rm bar.txt 
+v314-ent-004:my_files student$ ls
+baz.txt	foo.txt
+
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
+v314-ent-004:my_files student$ mv foo.txt to qux.txt
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+v314-ent-004:my_files student$ ls
+baz.txt	foo.txt
 
 
 
@@ -83,7 +110,9 @@ Write the command that you used to move the file.  Copy and paste the output of 
 [NO OUTPUT]
 ----------
 
-
+v314-ent-004:my_files student$ cd .. 
+v314-ent-004:mtec1003-lab-03 student$ ls
+books		logs		logs.tar.gz	my_files	web
 
 ==========
 13. Try removing the directory called my_files using rmdir.
@@ -91,14 +120,16 @@ Write the command that you used to move the file.  Copy and paste the output of 
 Write out the command that you used and what happened.
 ----------
 
-
+v314-ent-004:mtec1003-lab-03 student$ rmdir my_files
+rmdir: my_files: Directory not empty
 
 ==========
 14. Try removing the directory called my_files using rm.
 
 Write out the command that you used and what happened.
 ----------
-
+v314-ent-004:mtec1003-lab-03 student$ rm my_files
+rm: my_files: is a directory
 
 
 ==========
@@ -109,6 +140,9 @@ Force the removal of the directory and files using the -rf flag
 $ rm -rf my_files
 ----------
 
+v314-ent-004:mtec1003-lab-03 student$ rm -rf my_files
+v314-ent-004:mtec1003-lab-03 student$ ls
+books		logs		logs.tar.gz	web
 
 
 ==========
@@ -120,6 +154,10 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
+v314-ent-004:mtec1003-lab-03 student$ cd books/other
+v314-ent-004:other student$ ls
+pg1232.txt
+cat pg1232.txt
 
 
 
@@ -133,7 +171,8 @@ Use the command, head, on the file to show the contents of the beginning of the 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
-
+head pg1232.txt
+Title: The Prince
 
 ==========
 18. Using the same file again!
@@ -144,7 +183,17 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
+v314-ent-004:other student$ tail pg1232.txt
 
+
+Most people start at our Web site which has the main PG search facility:
+
+     http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
 
 
 ==========
@@ -156,7 +205,10 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
-
+less pg1232.txt
+more pg1232.txt
+space bar lets you conintue through the text 
+q returns back to the command line 
 
 
 ==========
@@ -164,15 +216,25 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+less - shows the beginning of file 
+more - shows the entire text 
+cat - shows all context of file 
+tail - end of the file 
+head - beginning of file 
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
+v314-ent-004:other student$ wc pg1232.txt
+    5063(line)   52639(words)  305864(characters) pg1232.txt
 
 
+v314-ent-004:other student$ wc -w pg1232.txt
+   52639 pg1232.txt
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+v314-ent-004:other student$ wc -l pg1232.txt
+    5063 pg1232.txt
