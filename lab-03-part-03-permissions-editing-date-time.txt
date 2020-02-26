@@ -17,7 +17,8 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
-
+v314-ent-004:other student$ date
+Tue Feb 25 19:50:14 EST 2020
 
 
 ==========
@@ -25,6 +26,14 @@ What command did you use, and what was its output?
 
 What command did you use, and what was its output?
 ----------
+v314-ent-004:other student$ cal 
+   February 2020      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
 
 
 
@@ -33,7 +42,18 @@ What command did you use, and what was its output?
 
 What commands did you use to do this?
 ----------
-
+v314-ent-004:other student$ cd ~
+v314-ent-004:~ student$ ls
+Adlm				Pictures			isus
+Applications			Public				mtec1003-lab-03
+Desktop				QLData				mtec1003-lab-03.tar.gz
+Documents			Things				pymel.log
+Downloads			Wilson-MTEC2230-Spring2020	stuff
+Library				__MACOSX			temp
+Movies				google.htmml			xgen
+Music				ipe.properties
+v314-ent-004:~ student$ pwd
+/Users/student
 
 
 ==========
@@ -41,6 +61,16 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+v314-ent-004:~ student$ mkdir copy_to_backup.sh
+v314-ent-004:~ student$ ls
+Adlm				Pictures			ipe.properties
+Applications			Public				isus
+Desktop				QLData				mtec1003-lab-03
+Documents			Things				mtec1003-lab-03.tar.gz
+Downloads			Wilson-MTEC2230-Spring2020	pymel.log
+Library				__MACOSX			stuff
+Movies				copy_to_backup.sh		temp
+Music				google.htmml			xgen
 
 
 
