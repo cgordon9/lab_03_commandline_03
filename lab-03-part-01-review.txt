@@ -16,14 +16,14 @@ This lab will review downloading and uncompressing files, and it will get us set
 Write the command that you used to do this below:
 ----------
 
-
+cd ~ 
 
 ==========
 2. Prove that you're in your home directory.
 
 Write the command that you used to do this - as well as its output - below :
 ----------
-
+pwd 
 
 
 ==========
@@ -31,14 +31,27 @@ Write the command that you used to do this - as well as its output - below :
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
-
+ls 
 
 
 ==========
 4. If there are directories or files in your home directory that have the word mtec1002 in them, list them below (otherwise skip this step):
 ----------
 
-
+Last login: Tue Feb 25 16:36:42 on console
+v314-ent-004:~ student$ ls 
+Adlm				Wilson-MTEC2230-Spring2020
+Applications			__MACOSX
+Desktop				google.htmml
+Documents			ipe.properties
+Downloads			isus
+Library				mtec1002
+Movies				mtec1002-lab-02
+Music				mtec1002-lab-02.zip
+Pictures			pymel.log
+Public				stuff
+QLData				temp
+Things				xgen
 
 ==========
 5. Delete these directories from your home folder by using this command:
@@ -51,13 +64,25 @@ $ rm -rf mtec1002-labs-02
 
 (skip if these directories don't exist)
 ----------
+v314-ent-004:~ student$ ls
+Adlm				Things
+Applications			Wilson-MTEC2230-Spring2020
+Desktop				__MACOSX
+Documents			google.htmml
+Downloads			ipe.properties
+Library				isus
+Movies				pymel.log
+Music				stuff
+Pictures			temp
+Public				xgen
+QLData
 
 
 
 ==========
 6.  A compressed archive (.tar.gz) of the lab files can be found at this url: 
 
-http://foureyes.github.io/mtec1002-spring2014/labs/03/mtec1002-lab-03.tar.gz
+mtc
 
 Download this file to your home directory into a file called mtec1002-lab-03.tar.gz.   Use a command that we learned to do this.
 
@@ -65,6 +90,11 @@ This command should have a *flag* to specify the output file.  MAKE SURE TO NAME
 
 Write the command(s) that you used to download this file - as well as its output - below:
 ----------
+v314-ent-004:~ student$ curl -o mtec1002-lab-03.tar.gz http://foureyes.github.io/mtec1002-spring2014/labs/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   162  100   162    0     0   3767      0 --:--:-- --:--:-- --:--:--  3767
+v314-ent-004:~ student$ 
 
 
 
@@ -72,9 +102,8 @@ Write the command(s) that you used to download this file - as well as its output
 7.  Uncompress the file that you just downloaded.
 
 Write the command(s) that you used to do this - as well as its output - below:
-----------
-
-
+-------
+ tar -xvf mtec1002-lab-03.tar.gz 
 
 ==========
 8.  You should now have a directory called mtec1002-lab-03 in your home directory.  Verify that this directory exists.
@@ -88,15 +117,82 @@ Otherwise...
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
+cd ~ 
+ls -al 
+v314-ent-004:~ student$ ls -al
+total 1936
+drwxr-xr-x+ 58 student  staff    1972 Feb 25 18:57 .
+drwxr-xr-x   7 root     admin     238 Jun 21  2018 ..
+-r--------   1 student  staff       7 Jun 22  2018 .CFUserTextEncoding
+-rw-r--r--@  1 student  staff   12292 Feb 25 18:57 .DS_Store
+drwxr-xr-x   3 student  staff     102 Aug  6  2018 .IdentityService
+drwx------   3 student  staff     102 Jan  9  2019 .ServiceHub
+drwx------  11 student  staff     374 Feb 25 18:55 .Trash
+-rw-------   1 student  staff       0 Aug 22  2016 .Xauthority
+drwxr-x--x   4 student  staff     136 Aug 22  2016 .adobe
+drwxr-xr-x   3 student  staff     102 Jan 17  2017 .anaconda
+drwxr-xr-x   5 student  staff     170 Jan 17  2017 .android
+drwxr-xr-x  15 student  staff     510 Feb 24 17:26 .atom
+-rw-r--r--   1 student  staff    1916 Feb 10 17:08 .bash_history
+-rw-r--r--@  1 student  staff     120 Jan 17  2018 .bash_profile
+drwx------  35 student  staff    1190 Feb 25 18:38 .bash_sessions
+drwxr-xr-x   4 student  staff     136 Aug 22  2016 .cache
+drwxr-xr-x  12 student  staff     408 Aug  6  2018 .config
+drwxr-xr-x   3 student  staff     102 Jan 17  2017 .continuum
+drwxr-xr-x   3 student  staff     102 Aug  6  2018 .dotnet
+-rw-r--r--   1 student  staff    4675 Jan  9  2019 .eaglerc
+drwxr-xr-x   5 student  staff     170 Aug  9  2017 .eclipse
+-rwxr-xr-x   1 student  staff      37 Aug 22  2016 .flexlmrc
+-rw-r--r--   1 student  staff     126 Jan 17  2018 .gitconfig
+drwx------   2 student  staff      68 Aug 22  2016 .gnome2
+drwxr-xr-x   3 student  staff     102 Aug 22  2016 .local
+drwxr-xr-x   3 student  staff     102 Aug 22  2016 .macports
+drwxr-xr-x   3 student  staff     102 Aug 22  2016 .matlab
+drwxr-xr-x   3 student  staff     102 Aug  6  2018 .mono
+drwxr-xr-x   3 student  staff     102 Jan 17  2017 .mplabcomm
+-rw-------   1 student  staff      18 Jan 17  2018 .mysql_history
+drwxr-xr-x   3 student  staff     102 Aug  6  2018 .nuget
+drwxr-xr-x  21 student  staff     714 Jul 25  2019 .oracle_jre_usage
+-rw-------   1 student  staff    1024 Aug 22  2016 .rnd
+drwxr-xr-x   6 student  staff     204 Aug 22  2016 .subversion
+drwxr-xr-x   4 student  staff     136 Aug 22  2016 .thumbnails
+drwxr-x---   2 student  staff      68 Aug 22  2016 Adlm
+drwxr-xr-x   4 student  staff     136 Aug 22  2016 Applications
+drwx------  13 student  staff     442 Feb 25 15:47 Desktop
+drwx------+ 22 student  staff     748 Feb 13 21:12 Documents
+drwx------+ 12 student  staff     408 Feb 25 18:55 Downloads
+drwx------@ 73 student  staff    2482 Jan 27 16:00 Library
+drwx------   8 student  staff     272 Jan 17  2017 Movies
+drwx------   7 student  staff     238 Jan  9 15:21 Music
+drwx------   6 student  staff     204 Jan  9 15:21 Pictures
+drwxr-xr-x   5 student  staff     170 Aug 22  2016 Public
+drwxr-xr-x@  3 student  staff     102 Aug  9  2017 QLData
+drwxr-xr-x   5 student  staff     170 Aug 22  2016 Things
+drwxr-xr-x  18 student  staff     612 Feb 19 15:15 Wilson-MTEC2230-Spring2020
+drwxrwxr-x@  3 student  staff     102 Feb  6  2013 __MACOSX
+-rw-r--r--   1 student  staff   11994 Feb 11 19:24 google.htmml
+-rw-r--r--   1 student  staff     824 Jan 17  2017 ipe.properties
+drwxr-xr-x   3 student  staff     102 Aug 22  2016 isus
+drwxr-xr-x@  6 student  staff     204 Feb 25 18:57 mtec1003-lab-03
+-rw-r--r--@  1 student  staff  920373 Feb 25 18:55 mtec1003-lab-03.tar.gz
+-rw-r--r--   1 student  staff       0 Jan 17  2018 pymel.log
+drwxr-xr-x   3 student  staff     102 Feb 11 19:53 stuff
+drwxr-xr-x   5 student  staff     170 Feb 24 15:29 temp
+drwxr-xr-x   2 student  staff      68 Aug 22  2016 xgen
 
 
 
 ==========
-9.  What directories are in the mtec1002-lab-03 folder?
+9.  What directories are in the mtec1003-lab-03 folder?
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
 
+cd mtec1003-lab-03 
+ls 
+v314-ent-004:~ student$ cd mtec1003-lab-03
+v314-ent-004:mtec1003-lab-03 student$ ls
+books	logs	web
 
 
 ==========
@@ -105,13 +201,18 @@ Write the command(s) that you used to determine this - as well as its output - b
 Write the command(s) (including going home) that you used to do this below:
 ----------
 
-
+cd ~ 
+cd books 
+v314-ent-004:~ student$  cd mtec1003-lab-03/books/science-fiction 
 
 ==========
 11.  Write the files that are in the science fiction directory below.
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
+v314-ent-004:~ student$  cd mtec1003-lab-03/books/science-fiction 
+v314-ent-004:science-fiction student$ ls
+pg84.txt	pg86.txt
 
 
 
@@ -120,6 +221,11 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to do this below:
 ----------
+v314-ent-004:~ student$ cd /users/student/mtec1003-lab-03
+v314-ent-004:mtec1003-lab-03 student$ cd /users/student/mtec1003-lab-03/books/science-fiction
+v314-ent-004:science-fiction student$ pwd
+/users/student/mtec1003-lab-03/books/science-fiction
+
 
 ==========
 OPTIONAL
@@ -127,13 +233,18 @@ OPTIONAL
 
 Write the command(s) that you used to do this below:
 ----------
-
+cd ../.. 
 ==========
 OPTIONAL
 14. Find out what the most recently modified directory is in mtec1002 (there are only 3 to choose from)?  How would you find this out?  Hint: perhaps using something to show the modified date... and sort it by time.
 
 Write the command(s) that you used to do this below:
 ----------
+v314-ent-004:mtec1003-lab-03 student$ ls -l 
+total 0
+drwxr-xr-x@   4 student  staff   136 Feb 13  2013 books
+drwxr-xr-x@ 129 student  staff  4386 Feb 25 18:57 logs
+drwxr-xr-x@   6 student  staff   204 Feb 13  2013 web
 
 ==========
 OPTIONAL
@@ -141,3 +252,7 @@ OPTIONAL
 
 Write the command(s) that you used to do this below:
 ----------
+v314-ent-004:mtec1003-lab-03 student$ tar -cvf logs.tar logs
+314-ent-004:mtec1003-lab-03 student$ gzip logs.tar
+v314-ent-004:mtec1003-lab-03 student$ ls
+books		logs		logs.tar.gz	web
