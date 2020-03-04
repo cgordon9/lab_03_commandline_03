@@ -61,7 +61,7 @@ v314-ent-004:~ student$ pwd
 
 What commands did you use to do this?
 ----------
-v314-ent-004:~ student$ mkdir copy_to_backup.sh
+v314-ent-004:~ student$ touch copy_to_backup.sh
 v314-ent-004:~ student$ ls
 Adlm				Pictures			ipe.properties
 Applications			Public				isus
@@ -79,7 +79,8 @@ Music				google.htmml			xgen
 
 What command did you use to find the permissions?
 ----------
-
+v314-ent-004:~ student$ ls -l copy_to_backup.sh
+-rw-r--r--  1 student  staff  0 Mar  3 18:31 copy_to_backup.sh
 
 
 ==========
@@ -87,8 +88,9 @@ What command did you use to find the permissions?
 
 What commands did you use to do this?  What was the output?
 ----------
-
-
+v314-ent-004:~ student$ chmod u+x copy_to_backup.sh
+v314-ent-004:~ student$ ls -l copy_to_backup.sh 
+-rwxr--r--  1 student  staff  0 Mar  3 18:31 copy_to_backup.sh
 
 ==========
 7. Try executing the file!
@@ -97,7 +99,9 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
+./copy_to_backup.sh
 
+nothing happens 
 
 
 ==========
@@ -105,8 +109,7 @@ What command did you use to try to execute the file?  What happens?
 
 What command did you use to do this?
 ----------
-
-
+opens a line txt editor 
 
 ==========
 9. In your file, write the following commands:
@@ -117,17 +120,38 @@ c. print out "I'm done backing up"
 
 Write out the code in your file below...
 ----------
+v314-ent-004:~ student$ cat copy_to_backup.sh
+mkdir -p ~/backup
+cp *.txt ~/backup
+echo "i'm done backing up" 
 
 
 
 ==========
 10. Create a directory in your home called test
 ----------
+v314-ent-004:~ student$ mkdir test 
+v314-ent-004:~ student$ ls
+Adlm				Public				mtec1003-lab-03
+Applications			QLData				mtec1003-lab-03.tar.gz
+Desktop				Things				mtec1003javascript
+Documents			Wilson-MTEC2230-Spring2020	pymel.log
+Downloads			__MACOSX			stuff
+Library				copy_to_backup.sh		temp
+Movies				google.htmml			test
+Music				ipe.properties			xgen
+Pictures			isus
+
 ==========
 11. Go into that directory and create two empty files... 1.txt and 2.txt
 
 What commands did you use to do this?
 ----------
+v314-ent-004:~ student$ cd test 
+v314-ent-004:test student$ touch 1.txt
+v314-ent-004:test student$ touch 2.txt
+v314-ent-004:test student$ ls
+1.txt	2.txt
 
 
 
@@ -136,6 +160,21 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+v314-ent-004:~ student$ mv copy_to_backup.sh test
+v314-ent-004:~ student$ ls
+Adlm				Public				mtec1003-lab-03.tar.gz
+Applications			QLData				mtec1003javascript
+Desktop				Things				pymel.log
+Documents			Wilson-MTEC2230-Spring2020	stuff
+Downloads			__MACOSX			temp
+Library				google.htmml			test
+Movies				ipe.properties			xgen
+Music				isus
+Pictures			mtec1003-lab-03
+v314-ent-004:~ student$ cd test
+v314-ent-004:test student$ ls
+1.txt			2.txt			copy_to_backup.sh
+v314-ent-004:test student$ 
 
 
 
@@ -144,6 +183,8 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+v314-ent-004:test student$ ./copy_to_backup.sh
+i'm done backing up
 
 
 
@@ -152,3 +193,6 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
+v314-ent-004:~ student$ cd backup
+v314-ent-004:backup student$ ls
+1.txt	2.txt
